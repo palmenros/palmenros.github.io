@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pedro Palacios
+title: Pedro Palacios Almendros
 ---
 
 # About Me
