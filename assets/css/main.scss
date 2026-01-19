@@ -204,7 +204,201 @@ body {
   }
 }
 
-// Responsive
+// Responsive & Mobile-Specific Styles
+
+// Utilities
+.desktop-only {
+  display: flex !important; // Restore flex for sidebar
+
+  @media (max-width: 768px) {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  display: none !important;
+
+  @media (max-width: 768px) {
+    display: block !important;
+  }
+}
+
+// Mobile Header
+.mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: $sidebar-bg;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+
+  .mobile-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 60px;
+
+    .mobile-header-left {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: $sidebar-text;
+    }
+
+    .mobile-header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      .current-page-title {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+      }
+
+      button {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.2rem;
+        color: $sidebar-text;
+      }
+    }
+  }
+
+  .mobile-nav-dropdown {
+    display: none;
+    background: lighten($sidebar-bg, 5%);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: $sidebar-text;
+      font-weight: 500;
+      padding: 0.5rem 0;
+
+      &.active {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+// Mobile Profile Bar
+.mobile-profile {
+  background: #fff;
+  border-bottom: 1px solid $border-color;
+  width: 100%;
+
+  .mobile-profile-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .profile-left {
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .profile-center {
+      flex: 1;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .name {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+
+      .role {
+        font-size: 0.8rem;
+        color: #666;
+        line-height: 1.2;
+      }
+    }
+
+    .profile-right {
+      .follow-btn {
+        background: $link-color;
+        color: #fff;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        &:hover {
+          background: $hover-color;
+        }
+      }
+    }
+  }
+
+  .follow-dropdown {
+    display: none;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-top: 1px solid $border-color;
+
+    &.active {
+      display: block;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+
+      i {
+        width: 20px;
+        text-align: center;
+      }
+    }
+
+    .social-links-mobile {
+      margin-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        &:hover {
+          color: $link-color;
+        }
+      }
+    }
+  }
+}
+
+// Adjusted Media Queries
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -212,25 +406,29 @@ body {
 
   .wrapper {
     flex-direction: column;
+    display: block; // Let wrapper be block to stack elements
   }
 
+  // Hide original sidebar
   .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding: 1rem;
+    display: none;
   }
 
+  // Hide original header
   .site-header {
-    padding: 1rem;
+    display: none;
+  }
 
-    nav {
-      gap: 1rem;
-      overflow-x: auto;
-    }
+  .main-content {
+    overflow-y: visible; // Allow scroll on body
   }
 
   .page-content {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
+
+    // Adjust header margins for mobile
+    h1 {
+      font-size: 2rem;
+    }
   }
 }

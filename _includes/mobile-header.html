@@ -1,0 +1,39 @@
+<div class="mobile-header mobile-only">
+    <div class="mobile-header-bar">
+        <div class="mobile-header-left">
+            <span class="my-name">Pedro Palacios</span>
+        </div>
+        <div class="mobile-header-right">
+            <span class="current-page-title">
+                {% assign stripped_url = page.url | remove: ".html" | remove: "/" %}
+                {% case stripped_url %}
+                {% when "" %}
+                Home
+                {% when "experience" %}
+                Experience
+                {% when "publications" %}
+                Publications
+                {% when "awards" %}
+                Awards & Honors
+                {% when "cv" %}
+                CV
+                {% else %}
+                {{ page.title | default: "Page" }}
+                {% endcase %}
+            </span>
+            <button id="mobile-menu-btn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    <nav id="mobile-nav-dropdown" class="mobile-nav-dropdown">
+        <a href="{{ "/" | relative_url }}" {% if page.url=="/" %}class="active" {% endif %}>Home</a>
+        <a href="{{ "/experience.html" | relative_url }}" {% if page.url=="/experience.html" %}class="active" {% endif
+            %}>Experience</a>
+        <a href="{{ "/publications.html" | relative_url }}" {% if page.url=="/publications.html" %}class="active" {%
+            endif %}>Publications</a>
+        <a href="{{ "/awards.html" | relative_url }}" {% if page.url=="/awards.html" %}class="active" {% endif
+            %}>Awards & Honors</a>
+        <a href="{{ "/cv.html" | relative_url }}" {% if page.url=="/cv.html" %}class="active" {% endif %}>CV</a>
+    </nav>
+</div>

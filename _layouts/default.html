@@ -17,18 +17,24 @@
   <link rel="preload" href="{{ "/assets/img/photo.jpg" | relative_url }}" as="image">
 </head>
 
-<body>
+{% include mobile-header.html %}
+{% include mobile-profile.html %}
 
+<div class="desktop-only">
   {% include sidebar.html %}
+</div>
 
-  <div class="main-content">
+<div class="main-content">
+  <div class="desktop-only">
     {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      {{ content }}
-    </main>
   </div>
 
+  <main class="page-content" aria-label="Content">
+    {{ content }}
+  </main>
+</div>
+
+<script src="{{ "/assets/js/mobile.js" | relative_url }}"></script>
 </body>
 
 </html>
