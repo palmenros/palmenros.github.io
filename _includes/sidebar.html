@@ -1,0 +1,40 @@
+<aside class="sidebar">
+    <div class="profile">
+        <img src="{{ "/assets/img/photo.jpg" | relative_url }}">
+        <h1>{{ site.title }}</h1>
+        <p>{{ site.description }}</p>
+    </div>
+
+    <div class="contact-info"
+        style="margin-top: 0rem; margin-bottom: 2rem; text-align: left; width: 100%; padding-left: 20%;">
+        <div style="margin-bottom: 0.5rem;">
+            <i class="fas fa-map-marker-alt" style="width: 20px; text-align: center; margin-right: 0.5rem;"></i>
+            Champaign, IL
+        </div>
+        <div>
+            <i class="fas fa-university" style="width: 20px; text-align: center; margin-right: 0.5rem;"></i> UIUC
+        </div>
+    </div>
+
+    <div class="social-links">
+        <a href="mailto:{{ site.email }}" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+            <span>Email</span>
+        </a>
+        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/pedro-palacios-almendros" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=Cptyk7gAAAAJ&hl=en" target="_blank"
+            rel="noopener norefCerrer" aria-label="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Google Scholar</span>
+        </a>
+    </div>
+</aside>

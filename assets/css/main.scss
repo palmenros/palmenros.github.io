@@ -1,0 +1,236 @@
+---
+---
+// Colors - Modern Dark/Light Theme inspired by Chirpy
+$sidebar-bg: #1b1b1e;
+$sidebar-text: #eaeaea;
+$body-bg: #ffffff;
+$text-color: #34343c;
+$link-color: #007bff;
+$hover-color: #0056b3;
+$heading-color: #111;
+$border-color: #e1e4e8;
+
+// Typography
+$font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-heading: 'Inter', sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family-base;
+  color: $text-color;
+  background-color: $body-bg;
+  margin: 0;
+  line-height: 1.6;
+  display: flex;
+  min-height: 100vh;
+}
+
+// Layout
+.wrapper {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Sidebar
+.sidebar {
+  width: 300px;
+  background-color: $sidebar-bg;
+  color: $sidebar-text;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  flex-shrink: 0;
+  text-align: center;
+
+  .profile {
+    margin-bottom: 1rem;
+
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0.5rem 0;
+      color: #fff;
+    }
+
+    p {
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+  }
+
+  .social-links {
+    margin-top: 0; // Spacing handled by contact-info margin
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding-left: 20%; // Align with contact info
+    width: 100%;
+
+    a {
+      color: $sidebar-text;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+
+      i {
+        width: 20px;
+        text-align: center;
+      }
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+// Main Content
+.main-content {
+  flex: 1;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+// Header / Navigation
+.site-header {
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid $border-color;
+  background: rgba(255, 255, 255, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  nav {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      color: $text-color;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      padding-bottom: 0.2rem;
+
+      &:hover,
+      &.active {
+        color: $link-color;
+        border-bottom: 2px solid $link-color;
+      }
+    }
+  }
+}
+
+.page-content {
+  padding: 3rem;
+  padding-top: 1.5rem;
+  max-width: 900px;
+
+  h1,
+  h2,
+  h3 {
+    color: $heading-color;
+    font-family: $font-family-heading;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0; // Reduce spacing before header
+    font-weight: 800;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 0.5rem;
+  }
+}
+
+// Components
+.card {
+  background: #fff;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 1rem; // Reduced padding further
+  margin-bottom: 1rem; // Reduced margin
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.15rem; // Slightly smaller
+    margin-bottom: 0.3rem;
+  }
+
+  .meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.3rem; // Reduced margin
+  }
+
+  p {
+    margin: 0 0 0.4rem; // Compact paragraph spacing
+    font-size: 0.95rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1rem;
+  }
+
+  .site-header {
+    padding: 1rem;
+
+    nav {
+      gap: 1rem;
+      overflow-x: auto;
+    }
+  }
+
+  .page-content {
+    padding: 1.5rem;
+  }
+}

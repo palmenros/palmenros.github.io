@@ -1,0 +1,9 @@
+<header class="site-header">
+  <nav>
+    <a href="{{ "/" | relative_url }}" {% if page.url == "/" %}class="active"{% endif %}>Home</a>
+    <a href="{{ "/experience.html" | relative_url }}" {% if page.url == "/experience.html" %}class="active"{% endif %}>Experience</a>
+    <a href="{{ "/publications.html" | relative_url }}" {% if page.url == "/publications.html" %}class="active"{% endif %}>Publications</a>
+    <a href="{{ "/awards.html" | relative_url }}" {% if page.url == "/awards.html" %}class="active"{% endif %}>Awards & Honors</a>
+    <a href="{{ "/cv.html" | relative_url }}" {% if page.url == "/cv.html" %}class="active"{% endif %}>CV</a>
+  </nav>
+</header>
