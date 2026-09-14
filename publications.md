@@ -12,12 +12,6 @@ title: Publications | Pedro Palacios
 </div>
 
 <div class="card">
-  <strong>Dynamic Race Detection for HW/SW Co-Designed Systems</strong>
-  <div class="meta">Submitted to ASPLOS 2027</div>
-  <p>G. Ajmone, <strong>P. Palacios</strong>, C. Sung, D. Kroening, T. Bourgeat, J. Choi</p>
-</div>
-
-<div class="card">
   <strong>Systolic Arrays and Structured Pruning Co-design for Efficient Transformers in Edge Systems</strong>
   <div class="meta">Great Lakes Symposium on VLSI (GLSVLSI) 2025 — <a href="https://dl.acm.org/doi/10.1145/3716368.3735158">Link to paper</a></div>
   <p><strong>P. Palacios</strong>, R. Medina, J.L. Rouas, G. Ansaloni and D. Atienza</p>
