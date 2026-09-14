@@ -46,6 +46,14 @@ title: Experience | Pedro Palacios
 
 <div class="card">
   <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+    <h3 style="margin-right: 1rem;">Amazon Web Services (AWS) — Annapurna Labs <span style="font-weight: normal; font-size: 0.9em; color: #444;">— Applied Scientist Intern</span></h3>
+    <span class="meta" style="margin-bottom: 0; text-align: right;">May 2026 - Aug 2026</span>
+  </div>
+  <p>Worked on power analysis and optimization for AWS Trainium Machine Learning accelerators.</p>
+</div>
+
+<div class="card">
+  <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
     <h3 style="margin-right: 1rem;">IMEC <span style="font-weight: normal; font-size: 0.9em; color: #444;">— Research Intern</span></h3>
     <span class="meta" style="margin-bottom: 0; text-align: right;">Jan 2025 - Jun 2025</span>
   </div>

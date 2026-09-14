@@ -6,6 +6,18 @@ title: Publications | Pedro Palacios
 # Publications
 
 <div class="card">
+  <strong>CCD-KV: Exploiting High-Density 3D Charge-Coupled Device Memory for Efficient On-Device LLM KV Caches</strong>
+  <div class="meta">Asia and South Pacific Design Automation Conference (ASP-DAC) 2027</div>
+  <p><strong>P. Palacios</strong>, B. Wang, F. Garcia, G. Ansaloni, D. Atienza, J. Klein, D. Biswas</p>
+</div>
+
+<div class="card">
+  <strong>Dynamic Race Detection for HW/SW Co-Designed Systems</strong>
+  <div class="meta">Submitted to ASPLOS 2027</div>
+  <p>G. Ajmone, <strong>P. Palacios</strong>, C. Sung, D. Kroening, T. Bourgeat, J. Choi</p>
+</div>
+
+<div class="card">
   <strong>Systolic Arrays and Structured Pruning Co-design for Efficient Transformers in Edge Systems</strong>
   <div class="meta">Great Lakes Symposium on VLSI (GLSVLSI) 2025 — <a href="https://dl.acm.org/doi/10.1145/3716368.3735158">Link to paper</a></div>
   <p><strong>P. Palacios</strong>, R. Medina, J.L. Rouas, G. Ansaloni and D. Atienza</p>
@@ -27,7 +39,7 @@ title: Publications | Pedro Palacios
 
 <div class="card">
   <h3>Transformer Auto-Regressive Attention Accelerator Using 3D String-Memory Key-Value Cache</h3>
-  <div class="meta">Patent in progress, 2025</div>
+  <div class="meta">Patent application in progress, 2026</div>
   <p><strong>P. Palacios</strong>, B. Wang, J. Klein, F. Garcia, G. Ansaloni, D. Atienza</p>
 </div> -->
 
